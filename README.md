@@ -1,10 +1,10 @@
-Step 0
+Step 0:
 You should have the "automation" folder opened in your terminal by now. If not, look at the slide on the board for instructions on how to do that.
 
-Step 1
+Step 1:
 Open up the file "file_renamer"
 
-Step 2
+Step 2:
 Let's start coding! Please walk through each line of code and read the comments!
 
 ```python
@@ -39,6 +39,6 @@ for i, filename in enumerate(files):
     os.rename(old_path, new_path) #This does the actual renaming!
     print(f"Renamed '{filename}' → '{new_filename}'") #Print out what just happened.
 ```
-Final Step
+Step 3:
 Run your file, and watch what happens!
     
