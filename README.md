@@ -7,7 +7,7 @@ Open up the file "file_renamer"
 Step 2
 Let's start coding!
 
-1) '''import os'''
+1) import os
 This is telling Python to use the os module so we can talk to the operating system to look inside folders and rename files.
 
 2) 'folder = "files_to_be_renamed"'
