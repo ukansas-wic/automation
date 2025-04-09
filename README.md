@@ -7,95 +7,52 @@ Open up the file "file_renamer"
 Step 2
 Let's start coding!
 
-1)
-python
-Copy
-Edit
-import os
+1) 'import os'
 This is telling Python to use the os module so we can talk to the operating system to look inside folders and rename files.
 
-2)
-python
-Copy
-Edit
-folder = "files_to_be_renamed"
+2) 'folder = "files_to_be_renamed"'
 You're telling Python where the files that need to be renamed are.
 
-3)
-python
-Copy
-Edit
-version_names = [
+3) 'version_names = [
     "v1",
     "v1_final",
     "v1_final_FINAL",
     "v1_final_FINAL_for_real_THIS_time",
     "v1_final_FINAL_for_real_THIS_time_LAST_EDIT",
-]
+]'
 Make a list of what you want to rename the files (you can choose any names you want, I just chose these for fun!)
 
-4)
-python
-Copy
-Edit
-files = os.listdir(folder)
+4) 'files = os.listdir(folder)'
 This grabs all the file names from the folder and stores them in a list called files
 
-5)
-python
-Copy
-Edit
-for i, filename in enumerate(files):
+5) 'for i, filename in enumerate(files):'
 Loop through each file in the folder. i is the file number and filename is the name of the file
 
-6)
-python
-Copy
-Edit
-base, ext = os.path.splitext(filename)
+6) 'base, ext = os.path.splitext(filename)'
 This splits the filename into 2 parts:
 
 base (the name of the file without extension)
 
 ext (the extension like .jpg, .png, .txt, etc)
 
-7)
-python
-Copy
-Edit
-try:
-    new_base = f"project_{version_names[i]}"
+7) 'try:
+    new_base = f"project_{version_names[i]}"'
 Try to use a name from the list
 
-8)
-python
-Copy
-Edit
-except IndexError:
-    new_base = f"project_backup_{i+1}"
+8) 'except IndexError:
+    new_base = f"project_backup_{i+1}"'
 If we run out of version names, we can fall back to something like project_backup_6, project_backup_7
 
 9)
-python
-Copy
-Edit
-old_path = os.path.join(folder, filename)
+'old_path = os.path.join(folder, filename)
 new_filename = f"{new_base}{ext}"
-new_path = os.path.join(folder, new_filename)
+new_path = os.path.join(folder, new_filename)'
 This builds the full file paths for before and after renaming. We need these to tell the computer where to look and where to rename.
 
-10)
-python
-Copy
-Edit
-os.rename(old_path, new_path)
+11) 'os.rename(old_path, new_path)'
 This does the actual renaming!
 
-11)
-python
-Copy
-Edit
-print(f"Renamed '{filename}' → '{new_filename}'")
+12) 'print(f"Renamed '{filename}' → '{new_filename}'")'
 Print out what just happened.
 
 Final Step
