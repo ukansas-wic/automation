@@ -14,9 +14,6 @@ This is telling Python to use the os module so we can talk to the operating syst
 You're telling Python where the files that need to be renamed are.
 
 3)
-python
-Copy
-Edit
 version_names = [
     "v1",
     "v1_final",
@@ -65,6 +62,7 @@ Final Step
 Run your file, and watch what happens!
 
 Here is the entire code together if you need:
+```python
 import os
 
 folder = "files_to_be_renamed" 
@@ -92,3 +90,6 @@ for i, filename in enumerate(files):
 
     os.rename(old_path, new_path)
     print(f"Renamed '{filename}' → '{new_filename}'")
+```
+
+    
